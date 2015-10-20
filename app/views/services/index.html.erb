@@ -13,7 +13,7 @@
         <td><%= service.name %></td>
         <td><%= link_to 'Show', service_path(service) %></td>
         <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%#= link_to 'Destroy', service_path(service),
+        <td><%= link_to 'Destroy', service_path(service),
                         method: :delete,
                 data: { confirm: 'Are you sure?' } %></td>
       </tr>

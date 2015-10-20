@@ -31,12 +31,6 @@ class ServicesController < ApplicationController
     end
   end
 
-  def deactivate
-    @user = User.find(params[:user_id])
-    @user.deactivate(@service.name)
-    @user.save
-  end
-
   def destroy
     @user = User.find(params[:user_id])
     @service = @user.services.find(params[:id])
