@@ -1,0 +1,23 @@
+<p>
+  <strong>Index:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Log:</strong>
+  <%= @user.log %>
+</p>
+
+<h2>Services</h2>
+<%= render @user.services %>
+
+<h2>Add a service:</h2>
+<%= render 'services/form_users' %>
+
+<!%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Back', users_path %>
