@@ -14,17 +14,8 @@ class ServicesController < ApplicationController
   def create
     if params[:user_id]
       @user = User.find(params[:user_id])
-
       @service = Service.find_by(name: service_params[:name])
       @user.services << @service unless @service == nil
-
-      #@services = Service.all
-      #@services.each do |service|
-      #  if params[:name] == service.name
-      #    @user.services << service
-      #    break
-      #  end
-      #end
     else
       @service = Service.new(service_params)
     end
